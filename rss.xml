@@ -5,8 +5,8 @@
         <description>Jariver - Jariver</description>
         <link></link>
         <atom:link href="" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Tue, 31 Jan 2017 13:04:44 +0800</lastBuildDate>
-        <pubDate>Tue, 31 Jan 2017 13:04:44 +0800</pubDate>
+        <lastBuildDate>Tue, 31 Jan 2017 15:59:36 +0800</lastBuildDate>
+        <pubDate>Tue, 31 Jan 2017 15:59:36 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -126,9 +126,92 @@
 &lt;p&gt;:bowtie::smile::laughing::blush::smiley::relaxed::smirk:&lt;br&gt;
 :heart_eyes::kissing_heart::kissing_closed_eyes::flushed::relieved::satisfied::grin:&lt;/p&gt;
 </description>
-                <link>/jekyll/git/c%23/java/javaweb/asp.net%20mvc/2017/01/30/test</link>
-                <guid>/jekyll/git/c%23/java/javaweb/asp.net%20mvc/2017/01/30/test</guid>
+                <link>/jekyll/git/csharp/java/javaweb/aspnet%20mvc/linux/2017/01/30/test</link>
+                <guid>/jekyll/git/csharp/java/javaweb/aspnet%20mvc/linux/2017/01/30/test</guid>
                 <pubDate>Mon, 30 Jan 2017 23:01:23 +0800</pubDate>
+        </item>
+
+        <item>
+                <title>Install Dual System (Windows10 and Ubuntu) without USB drive.</title>
+                <description>&lt;h2 id=&quot;the-reason-of-that-i-installed-dual-system&quot;&gt;The reason of that I installed Dual System.&lt;/h2&gt;
+
+&lt;p&gt;Recently, I install and configure Jekyll to build a blog in Github.com using Windows. But actually, Jekyll is based on Ruby and using Ruby in Windows is unsuitable, I think. However using Linux virtual machine is unsmooth. Then I decided to install Dual System that is included Windows10 and Ubuntu.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-you-need&quot;&gt;What You Need&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a Ubuntu ISO file&lt;/li&gt;
+&lt;li&gt;a installed Windows System&lt;/li&gt;
+&lt;li&gt;a UltraISO Software&lt;/li&gt;
+&lt;li&gt;a EasyBCD Software&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can get them via Baidu, Google and so on.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-1-prepare-disk&quot;&gt;Step 1. Prepare Disk&lt;/h2&gt;
+
+&lt;p&gt;Right click &amp;quot;计算机&amp;quot; and choose the &amp;quot;管理&amp;quot; choise, and then click the &amp;quot;磁盘管理&amp;quot; in the left (You know my Windows10 is Chinese version). You should separate a useless disk and delete it in order to use it to install your Ubuntu.&lt;/p&gt;
+
+&lt;h2 id=&quot;step2-make-installation-environment&quot;&gt;Step2. Make Installation Environment&lt;/h2&gt;
+
+&lt;p&gt;Open your installed EasyBCD and add new list, choose NeoGrub, then click install. A Configure button will display, you click it and add some text after &amp;quot;menu.lst&amp;quot; like the following code.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;menu.lst title Install Ubuntu
+root (hd0,0)
+kernel (hd0,0)/vmlinuz.efi boot=casper iso-scan/filename=/ubuntu-14.10-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8
+initrd (hd0,0)/initrd.lz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;the &amp;quot;ubuntu-14.10-desktop-i386.iso&amp;quot; is the name of your Ubuntu IOS file.&lt;/li&gt;
+&lt;li&gt;the &amp;quot;(hd0,0)&amp;quot; stands for your C Drive. The first 0 stands for the first hard disk, and the second 0 stands for the first column(&amp;quot;卷&amp;quot;) in the first hard disk. If your C Drive isn&amp;#39;t the first column in the first hard disk, you should change it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then you should open your ISO file, and move initrd.lz and vmlinuz.efi under The Casper folder to the root directory in your C Drive. And move all files under the .disk folder to the root directory in your C Drive. At last, you need to move your ISO file to the root directory in your C Drive.&lt;/p&gt;
+
+&lt;h2 id=&quot;step3-install-your-ubuntu&quot;&gt;Step3. Install your Ubuntu&lt;/h2&gt;
+
+&lt;p&gt;You should reset your computer and you will see that you can choose two choise to start system. The first is your Windows system, and the second is NeoGrub that you have installed just now. Without doubt, you will start your system by NeoGrub. Then the installation environment is building, which is a Ubuntu UI.&lt;/p&gt;
+
+&lt;p&gt;If you haven&amp;#39;t the NeoGrub Startup Item, I think you have some mistakes in Step2.&lt;/p&gt;
+
+&lt;p&gt;After you come in Ubuntu Installation Environment, you should click Ctrl+Alt+T to open terminal. Input&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;sudo umout -l /isodevice
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;to unmount mounted Drive.&lt;/p&gt;
+
+&lt;p&gt;Next, you can run the &amp;quot;Default Installation&amp;quot; in the desktop to Install your Ubuntu System. The process is basic Installation process, you can use the free Column that you deleted it in Step1 to install your system. I advice that you can create four partitions. they are /, swap, /home and /boot. The first two are necessary, and the latter two are unnecessary. The swap partition is similar to the virtual file in Windows. At the end of the article, I will tell you how to creat all partitions.&lt;/p&gt;
+
+&lt;h4 id=&quot;partition&quot;&gt;/ partition&lt;/h4&gt;
+
+&lt;p&gt;type: primary partition&lt;br&gt;
+size: 15-20G&lt;br&gt;
+purpose: ext4 journaling file system&lt;br&gt;
+mount point: /&lt;/p&gt;
+
+&lt;h4 id=&quot;swap-partition&quot;&gt;swap partition&lt;/h4&gt;
+
+&lt;p&gt;type: logic partition&lt;br&gt;
+size: 1024-2048M&lt;br&gt;
+purpose: swap&lt;/p&gt;
+
+&lt;h4 id=&quot;boot-partition&quot;&gt;/boot partition&lt;/h4&gt;
+
+&lt;p&gt;type: logic partition&lt;br&gt;
+size: 200M&lt;br&gt;
+purpose: ext4 journaling file system&lt;br&gt;
+mount point: /boot&lt;/p&gt;
+
+&lt;h4 id=&quot;home-partition&quot;&gt;/home partition&lt;/h4&gt;
+
+&lt;p&gt;type: logic partition&lt;br&gt;
+size: you have&lt;br&gt;
+purpose: ext4 journaling file system&lt;br&gt;
+mount point: /home&lt;/p&gt;
+
+&lt;p&gt;Tip: At the last, you should choose the boot device, that is the id of your /boot partition, such as sda5, sda6 and so on.&lt;/p&gt;
+</description>
+                <link>/linux/2017/01/30/InstallDualSystem</link>
+                <guid>/linux/2017/01/30/InstallDualSystem</guid>
+                <pubDate>Mon, 30 Jan 2017 00:00:00 +0800</pubDate>
         </item>
 
 

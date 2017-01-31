@@ -11,4 +11,5 @@
 /sitemap.txt
 /README_en
 
-/jekyll/git/c%23/java/javaweb/asp.net%20mvc/2017/01/30/test
+/jekyll/git/csharp/java/javaweb/aspnet%20mvc/linux/2017/01/30/test
+/linux/2017/01/30/InstallDualSystem

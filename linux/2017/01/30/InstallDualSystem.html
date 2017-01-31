@@ -1,6 +1,6 @@
 
 
-        <!DOCTYPE HTML>
+ <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     
     
     
-    <title>Jariver</title>
+    <title>Install Dual System (Windows10 and Ubuntu) without USB drive. | Jariver</title>
     
 
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
@@ -21,14 +21,14 @@
     
     <meta name="description" content="page.description">
     
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="article">
     
-    <meta property="og:title" content="">
-    <meta property="og:url" content="/">
+    <meta property="og:title" content="Install Dual System (Windows10 and Ubuntu) without USB drive.">
+    <meta property="og:url" content="/linux/2017/01/30/InstallDualSystem">
     <meta property="og:site_name" content="Jariver">
     <meta property="og:description" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="">
+    <meta name="twitter:title" content="Install Dual System (Windows10 and Ubuntu) without USB drive.">
     <meta name="twitter:description" content="page.description">
     <meta name="twitter:creator" content="@">
     <link rel="publisher" href="">
@@ -86,109 +86,14 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-  
-  
-  
-  
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/jekyll/git/csharp/java/javaweb/aspnet%20mvc/linux/2017/01/30/test" title="Test" itemprop="url">Test</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Jariver" target="_blank" itemprop="author">Jariver</a>
-		
-  <p class="article-time">
-    <time datetime="2017-01-30 23:01:23 +0800" itemprop="datePublished">  2017-01-30</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="this-is-a-test-post">This is a test post.</h1>
-
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/jekyll/git/csharp/java/javaweb/aspnet%20mvc/linux/2017/01/30/test#more">Read More</a>
-          
-       </p>
-    </div>
-    
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <!--
-  <%- list_categories(item.categories, {
-      show_count: false,
-      class: 'article-category',
-      style: 'none',
-      separator: '►'
-  }) %>
-  -->
-  
-  <a class="article-category-link" href="/categories/#Jekyll">Jekyll</a>
-  
-  <a class="article-category-link" href="/categories/#Git">Git</a>
-  
-  <a class="article-category-link" href="/categories/#CSharp">CSharp</a>
-  
-  <a class="article-category-link" href="/categories/#Java">Java</a>
-  
-  <a class="article-category-link" href="/categories/#JavaWeb">JavaWeb</a>
-  
-  <a class="article-category-link" href="/categories/#AspNet MVC">AspNet MVC</a>
-  
-  <a class="article-category-link" href="/categories/#Linux">Linux</a>
-  
-</div>
-
-
-  <div class="article-tags">
-  <!--
-  <% var tags = [];
-    item.tags.forEach(function(tag){
-      tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
-    }); %>-->
-  <span></span> <!--<%- tags.join('') %>-->
-  
-  
-  <a href="/tags/#Test">Test</a>
-  
-  </div>
-
-</div>
+      
 
 
 
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-    </article>
-
-
-
-
-
-
+<div id="main" class="post" itemscope itemprop="blogPost">
   
-  
-  
-  
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+	<article itemprop="articleBody"> 
+	<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/linux/2017/01/30/InstallDualSystem" title="Install Dual System (Windows10 and Ubuntu) without USB drive." itemprop="url">Install Dual System (Windows10 and Ubuntu) without USB drive.</a>
@@ -198,24 +103,96 @@
 		<a href="/about" title="Jariver" target="_blank" itemprop="author">Jariver</a>
 		
   <p class="article-time">
-    <time datetime="2017-01-30 00:00:00 +0800" itemprop="datePublished">  2017-01-30</time>
+    <time datetime="2017-01-30 00:00:00 +0800" itemprop="datePublished"> 发表于 2017-01-30</time>
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <h2 id="the-reason-of-that-i-installed-dual-system">The reason of that I installed Dual System.</h2>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article toc-content" style="display: none;">
+		
+			<!--<%- toc(item.content) %>-->
+		
+		</div>
+		
+		<h2 id="the-reason-of-that-i-installed-dual-system">The reason of that I installed Dual System.</h2>
 
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/linux/2017/01/30/InstallDualSystem#more">Read More</a>
-          
-       </p>
-    </div>
-    
-    <footer class="article-footer clearfix">
+<p>Recently, I install and configure Jekyll to build a blog in Github.com using Windows. But actually, Jekyll is based on Ruby and using Ruby in Windows is unsuitable, I think. However using Linux virtual machine is unsmooth. Then I decided to install Dual System that is included Windows10 and Ubuntu.</p>
+
+<h2 id="what-you-need">What You Need</h2>
+
+<ul>
+<li>a Ubuntu ISO file</li>
+<li>a installed Windows System</li>
+<li>a UltraISO Software</li>
+<li>a EasyBCD Software</li>
+</ul>
+
+<p>You can get them via Baidu, Google and so on.</p>
+
+<h2 id="step-1-prepare-disk">Step 1. Prepare Disk</h2>
+
+<p>Right click &quot;计算机&quot; and choose the &quot;管理&quot; choise, and then click the &quot;磁盘管理&quot; in the left (You know my Windows10 is Chinese version). You should separate a useless disk and delete it in order to use it to install your Ubuntu.</p>
+
+<h2 id="step2-make-installation-environment">Step2. Make Installation Environment</h2>
+
+<p>Open your installed EasyBCD and add new list, choose NeoGrub, then click install. A Configure button will display, you click it and add some text after &quot;menu.lst&quot; like the following code.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">menu.lst title Install Ubuntu
+root (hd0,0)
+kernel (hd0,0)/vmlinuz.efi boot=casper iso-scan/filename=/ubuntu-14.10-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8
+initrd (hd0,0)/initrd.lz
+</code></pre></div>
+<ul>
+<li>the &quot;ubuntu-14.10-desktop-i386.iso&quot; is the name of your Ubuntu IOS file.</li>
+<li>the &quot;(hd0,0)&quot; stands for your C Drive. The first 0 stands for the first hard disk, and the second 0 stands for the first column(&quot;卷&quot;) in the first hard disk. If your C Drive isn&#39;t the first column in the first hard disk, you should change it.</li>
+</ul>
+
+<p>Then you should open your ISO file, and move initrd.lz and vmlinuz.efi under The Casper folder to the root directory in your C Drive. And move all files under the .disk folder to the root directory in your C Drive. At last, you need to move your ISO file to the root directory in your C Drive.</p>
+
+<h2 id="step3-install-your-ubuntu">Step3. Install your Ubuntu</h2>
+
+<p>You should reset your computer and you will see that you can choose two choise to start system. The first is your Windows system, and the second is NeoGrub that you have installed just now. Without doubt, you will start your system by NeoGrub. Then the installation environment is building, which is a Ubuntu UI.</p>
+
+<p>If you haven&#39;t the NeoGrub Startup Item, I think you have some mistakes in Step2.</p>
+
+<p>After you come in Ubuntu Installation Environment, you should click Ctrl+Alt+T to open terminal. Input</p>
+<div class="highlight"><pre><code class="language-" data-lang="">sudo umout -l /isodevice
+</code></pre></div>
+<p>to unmount mounted Drive.</p>
+
+<p>Next, you can run the &quot;Default Installation&quot; in the desktop to Install your Ubuntu System. The process is basic Installation process, you can use the free Column that you deleted it in Step1 to install your system. I advice that you can create four partitions. they are /, swap, /home and /boot. The first two are necessary, and the latter two are unnecessary. The swap partition is similar to the virtual file in Windows. At the end of the article, I will tell you how to creat all partitions.</p>
+
+<h4 id="partition">/ partition</h4>
+
+<p>type: primary partition<br>
+size: 15-20G<br>
+purpose: ext4 journaling file system<br>
+mount point: /</p>
+
+<h4 id="swap-partition">swap partition</h4>
+
+<p>type: logic partition<br>
+size: 1024-2048M<br>
+purpose: swap</p>
+
+<h4 id="boot-partition">/boot partition</h4>
+
+<p>type: logic partition<br>
+size: 200M<br>
+purpose: ext4 journaling file system<br>
+mount point: /boot</p>
+
+<h4 id="home-partition">/home partition</h4>
+
+<p>type: logic partition<br>
+size: you have<br>
+purpose: ext4 journaling file system<br>
+mount point: /home</p>
+
+<p>Tip: At the last, you should choose the boot device, that is the id of your /boot partition, such as sda5, sda6 and so on.</p>
+  
+	</div>
+	<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
@@ -253,35 +230,43 @@
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
+	  <div data-url="http://localhost:4000/linux/2017/01/30/InstallDualSystem" data-title="Install Dual System (Windows10 and Ubuntu) without USB drive. | Jariver" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>   
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/jekyll/git/csharp/java/javaweb/aspnet%20mvc/linux/2017/01/30/test"  title="Test">
+ <strong>下一篇：</strong><br/> 
+ <span>Test
+</span>
+</a>
 </div>
 
-</footer>
-    </article>
+</nav>
 
+	
 
+</div>  
 
-
-
-
-
-  <nav id="page-nav" class="clearfix">
-  <nav id="page-nav" class="clearfix">
-    
-    
-    <span class="page-number current">1</span>
-    
-    
-     
-  </nav>
-  </nav>
-
-</div>
       
       
       <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside toc-content">
+ 
+ <!--<%- toc(item.content) %>-->
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
@@ -466,15 +451,116 @@ $(document).ready(function(){
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
       
+      $('#toc.toc-aside').css('display', 'none');
+      
     }
   });
 });
 </script>
 
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('#toc.toc-aside').toc({
+    title: "文章目录",
+    showEffect: "none"
+  });
+  $('#toc.toc-article').toc({
+    title: "文章目录",
+    showEffect: "show",
+    showSpeed: 0
+  });
+});
+</script>
 
 
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+/*
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      //$('.hoverqrcode').hide();
+  });
+  */
+});   
+</script>
 
 
 
@@ -566,5 +652,5 @@ $(document).ready(function(){
 
 <!-- Tiny_search End -->
   </body>
- </html>
+</html>
 
