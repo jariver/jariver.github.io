@@ -132,7 +132,8 @@
 
 <h2 id="step-1-prepare-disk">Step 1. Prepare Disk</h2>
 
-<p>Right click &quot;计算机&quot; and choose the &quot;管理&quot; choise, and then click the &quot;磁盘管理&quot; in the left (You know my Windows10 is Chinese version). You should separate a useless disk and delete it in order to use it to install your Ubuntu.</p>
+<p>Right click &quot;计算机&quot; and choose the &quot;管理&quot; choise, and then click the &quot;磁盘管理&quot; in the left (You know my Windows10 is Chinese version). You should separate a useless disk and delete it in order to use it to install your Ubuntu.<br>
+<img src="https://jariver.github.io/source/pictures/DualSystem1.jpg" alt=""></p>
 
 <h2 id="step2-make-installation-environment">Step2. Make Installation Environment</h2>
 
@@ -144,8 +145,10 @@ initrd (hd0,0)/initrd.lz
 </code></pre></div>
 <ul>
 <li>the &quot;ubuntu-14.10-desktop-i386.iso&quot; is the name of your Ubuntu IOS file.</li>
-<li>the &quot;(hd0,0)&quot; stands for your C Drive. The first 0 stands for the first hard disk, and the second 0 stands for the first column(&quot;卷&quot;) in the first hard disk. If your C Drive isn&#39;t the first column in the first hard disk, you should change it.</li>
+<li>the &quot;(hd0,0)&quot; stands for your C Drive. The first 0 stands for the first hard disk, and the second 0 stands for the first column(&quot;卷&quot;) in the first hard disk (Maybe in the picture above, you can understand it). If your C Drive isn&#39;t the first column in the first hard disk, you should change it.</li>
 </ul>
+
+<p><img src="https://jariver.github.io/source/pictures/DualSystem2.jpg" alt=""></p>
 
 <p>Then you should open your ISO file, and move initrd.lz and vmlinuz.efi under The Casper folder to the root directory in your C Drive. And move all files under the .disk folder to the root directory in your C Drive. At last, you need to move your ISO file to the root directory in your C Drive.</p>
 
@@ -243,14 +246,14 @@ mount point: /home</p>
 	
 <nav class="article-nav clearfix">
  
-
-<div class="next">
-<a href="/jekyll/git/csharp/java/javaweb/aspnet%20mvc/linux/2017/01/30/test"  title="Test">
- <strong>下一篇：</strong><br/> 
- <span>Test
-</span>
+ <div class="prev" >
+ <a href="/jekyll/git/csharp/java/javaweb/aspnet%20mvc/linux/2017/01/29/test" title="Test">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Test</span>
 </a>
 </div>
+
 
 </nav>
 
@@ -279,10 +282,6 @@ mount point: /home</p>
 		<ul>
 		
 		  
-			<li><a href="/categories/#Linux" title="Linux">Linux<sup>2</sup></a></li>
-		  
-		
-		  
 			<li><a href="/categories/#Jekyll" title="Jekyll">Jekyll<sup>1</sup></a></li>
 		  
 		
@@ -306,6 +305,10 @@ mount point: /home</p>
 			<li><a href="/categories/#AspNet MVC" title="AspNet MVC">AspNet MVC<sup>1</sup></a></li>
 		  
 		
+		  
+			<li><a href="/categories/#Linux" title="Linux">Linux<sup>2</sup></a></li>
+		  
+		
 		</ul>
 </div>
 
@@ -316,15 +319,15 @@ mount point: /home</p>
 		<ul class="clearfix">
 		
 			
+				<li><a href="/tags/#Test" title="Test">Test<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/#Ubuntu" title="Ubuntu">Ubuntu<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/#DualSystem" title="DualSystem">DualSystem<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/#Test" title="Test">Test<sup>1</sup></a></li>
 			
 		
 		</ul>
