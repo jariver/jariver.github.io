@@ -11,5 +11,13 @@
 /sitemap.txt
 /README_en
 
+/onlinejudge/2017/02/01/reConstructBinaryTree
+/onlinejudge/2017/02/01/PrintBinaryTree
+/onlinejudge/2017/02/01/RotateArray
+/onlinejudge/2017/02/01/GetNext
+/onlinejudge/2017/02/01/replaceSpace
+/onlinejudge/2017/02/01/Find
+/onlinejudge/2017/02/01/printListFromTailToHead
+/onlinejudge/2017/02/01/StackToQueue
 /linux/2017/01/30/InstallDualSystem
-/jekyll/git/csharp/java/javaweb/aspnet%20mvc/linux/2017/01/29/test
+/jekyll/test/2017/01/29/test

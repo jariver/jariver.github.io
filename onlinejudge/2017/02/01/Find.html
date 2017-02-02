@@ -1,13 +1,14 @@
-<!DOCTYPE HTML>
+
+
+ <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="UTF-8">
     
     
     
     
-    <title>Test | Jariver</title>
+    <title>牛客网剑指Offer系列——二维数组中的查找 | Jariver</title>
     
 
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
@@ -22,12 +23,12 @@
     
     <meta property="og:type" content="article">
     
-    <meta property="og:title" content="Test">
-    <meta property="og:url" content="/jekyll/git/csharp/java/javaweb/aspnet%20mvc/linux/2017/01/29/test">
+    <meta property="og:title" content="牛客网剑指Offer系列——二维数组中的查找">
+    <meta property="og:url" content="/onlinejudge/2017/02/01/Find">
     <meta property="og:site_name" content="Jariver">
     <meta property="og:description" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Test">
+    <meta name="twitter:title" content="牛客网剑指Offer系列——二维数组中的查找">
     <meta name="twitter:description" content="page.description">
     <meta name="twitter:creator" content="@">
     <link rel="publisher" href="">
@@ -52,12 +53,12 @@
         <div>
 		    
 			<div id="imglogo">
-				<a href="/"><img src="/assets/img/logo.png" alt="Jariver" title="Jariver"></a>
+				<a href="/"><img src="/assets/img/logo.png" alt="Jariver" title="Jariver"/></a>
 			</div>
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="Jariver">Jariver</a></h1>
-				<h2 class="blog-motto">A program fan in Fzu.</h2>
+				<h2 class="blog-motto">A programming enthusiast in Fzu.</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="menu">
 			</a></div>
@@ -75,13 +76,13 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索">
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:">
 					</form>
 					
 					</li>
 				</ul>
-			</ul></nav>	
+			</nav>	
 </div>
     </header>
     <div id="container">
@@ -95,15 +96,14 @@
 	<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/jekyll/git/csharp/java/javaweb/aspnet%20mvc/linux/2017/01/29/test" title="Test" itemprop="url">Test</a>
+      <a href="/onlinejudge/2017/02/01/Find" title="牛客网剑指Offer系列——二维数组中的查找" itemprop="url">牛客网剑指Offer系列——二维数组中的查找</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Jariver" target="_blank" itemprop="author">Jariver</a>
 		
-  </p>
-<p class="article-time">
-    <time datetime="2017-01-29 23:01:23 +0800" itemprop="datePublished"> 发表于 2017-01-29</time>
+  <p class="article-time">
+    <time datetime="2017-02-01 23:00:21 +0800" itemprop="datePublished"> 发表于 2017-02-01</time>
     
   </p>
 </header>
@@ -115,131 +115,83 @@
 		
 		</div>
 		
-		<h1 id="this-is-a-test-post">This is a test post.</h1>
+		<h2 id="题目描述">题目描述</h2>
 
-<h2 id="link-and-paragraph-test">Link and Paragraph Test</h2>
+<p>在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。</p>
 
-<h3 id="baidu-jariver-39-s-blog">
-<a href="http://baidu.com/">Baidu</a> <u><a href="https://jariver.github.io/">Jariver's Blog</a></u>
-</h3>
+<h2 id="题目解析">题目解析</h2>
 
-<p><strong>Strong Text</strong> and <em>Italic Text</em> and <u>Underline Text</u> and <del>Deleted Text</del>.</p>
+<p>这一题一开始我直接用C#进行遍历搜索，严格来说这也不能算是一种解题方法。</p>
 
-<blockquote>
-<p>Praesent diam elit, interdum ut pulvinar placerat, imperdiet at magna.</p>
-</blockquote>
-
-<h2 id="display-picture">Display Picture</h2>
-
-<h3 id="display-picture-in-network">Display Picture in network</h3>
-
-<p><img src="http://ww1.sinaimg.cn/mw690/81b78497jw1emfgwkasznj21hc0u0qb7.jpg" alt=""></p>
-
-<h3 id="display-picture-in-github">Display picture in Github</h3>
-
-<p><img src="https://jariver.github.io/source/pictures/test.jpg" alt=""></p>
-
-<h3 id="display-picture-and-text">Display picture and text</h3>
-
-<p>豫章故郡，洪都新府。星分翼轸，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，徐孺下陈蕃之榻。雄州雾列，俊采星驰。台隍枕夷夏之交，宾主尽东南之美。都督阎公之雅望，棨戟遥临；宇文新州之懿范，襜帷暂驻。十旬休假，胜友如云；千里逢迎，高朋满座。腾蛟起凤，孟学士之词宗；紫电青霜，王将军之武库。家君作宰，路出名区；童子何知，躬逢胜饯。<br>
-<img src="http://ww1.sinaimg.cn/large/81b78497jw1emfgts2pt4j21hc0u0k1c.jpg" alt="Wallbase - dgnfly (wallbase.cc/wallpaper/1384450)"><br>
-时维九月，序属三秋。潦水尽而寒潭清，烟光凝而暮山紫。俨骖騑于上路，访风景于崇阿；临帝子之长洲，得天人之旧馆。层峦耸翠，上出重霄；飞阁流丹，下临无地。鹤汀凫渚，穷岛屿之萦回；桂殿兰宫，即冈峦之体势。<br>
-披绣闼，俯雕甍，山原旷其盈视，川泽纡其骇瞩。闾阎扑地，钟鸣鼎食之家；舸舰迷津，青雀黄龙之舳。云销雨霁，彩彻区明。落霞与孤鹜齐飞，秋水共长天一色。渔舟唱晚，响穷彭蠡之滨；雁阵惊寒，声断衡阳之浦。</p>
-
-<h2 id="list-types">List Types</h2>
-
-<h3 id="definition-list-dl">Definition List (dl)</h3>
-
-<dl>
-<dt>Definition List Title</dt>
-<dd>This is a definition list division.</dd>
-</dl>
-
-<h3 id="ordered-list-ol">Ordered List (ol)</h3>
-
-<ol>
-<li>List Item 1</li>
-<li>List Item 2</li>
-<li>List Item 3</li>
-</ol>
-
-<h3 id="unordered-list-ul">Unordered List (ul)</h3>
-
-<ul>
-<li>List Item 1</li>
-<li>List Item 2</li>
-<li>List Item 3</li>
-</ul>
-
-<h2 id="table">Table</h2>
-
-<table>
-<thead>
-<tr>
-<th>Table Header 1</th>
-<th>Table Header 2</th>
-<th>Table Header 3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Division 1</td>
-<td>Division 2</td>
-<td>Division 3</td>
-</tr>
-<tr>
-<td>Division 1</td>
-<td>Division 2</td>
-<td>Division 3</td>
-</tr>
-<tr>
-<td>Division 1</td>
-<td>Division 2</td>
-<td>Division 3</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="misc-stuff-abbr-acronym-sub-sup-etc">Misc Stuff - abbr, acronym, sub, sup, etc.</h2>
-
-<p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>
-
-<h2 id="block-quote">Block Quote</h2>
-
-<h3 id="normal-blockquote">Normal blockquote</h3>
-
-<blockquote>
-<p>Praesent diam elit, interdum ut pulvinar placerat, imperdiet at magna.</p>
-</blockquote>
-
-<h2 id="code-block">Code Block</h2>
-
-<h3 id="normal-code-block">Normal code block</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">alert('Hello World!');
-</code></pre></div>
-<div class="highlight"><pre><code class="language-" data-lang="">print "Hello world"
-</code></pre></div>
-<h3 id="highlight-code-block">Highlight code block</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span> <span class="s">"Hello world"</span>
-</code></pre></div>
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">foo</span>
-  <span class="nb">puts</span> <span class="s1">'foo'</span>
-<span class="k">end</span></code></pre></figure>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr>
-<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
-3</pre></td>
-<td class="code"><pre><span class="k">def</span> <span class="nf">foo</span>
-  <span class="nb">puts</span> <span class="s1">'foo'</span>
-<span class="k">end</span><span class="w">
-</span></pre></td>
-</tr></tbody></table></code></pre></figure>
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17</pre></td><td class="code"><pre><span class="kd">class</span> <span class="nc">Solution</span>
+<span class="o">{</span>
+    <span class="kd">public</span> <span class="n">bool</span> <span class="nf">Find</span><span class="o">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">array</span><span class="o">,</span> <span class="kt">int</span> <span class="n">target</span><span class="o">)</span>
+    <span class="o">{</span>
+        <span class="n">foreach</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span> <span class="n">in</span> <span class="n">array</span><span class="o">)</span>
+        <span class="o">{</span>
+            <span class="n">foreach</span><span class="o">(</span><span class="kt">int</span> <span class="n">b</span> <span class="n">in</span> <span class="n">a</span><span class="o">)</span>
+            <span class="o">{</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">b</span><span class="o">==</span><span class="n">target</span><span class="o">)</span>
+                <span class="o">{</span>
+                    <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-<h2 id="emoji-test">Emoji Test</h2>
+<p>实际上，题目给出的二维数组每一行从左到右递增，每一列从上到下递增。我们可以从左下角开始比较，若左下角的数小于target，则往右遍历；若左下角的数大于target，则往上遍历。这样可以最快地找出target。代码如下：</p>
 
-<p><img class="emoji" title=":bowtie:" alt=":bowtie:" src="https://assets-cdn.github.com/images/icons/emoji/bowtie.png" height="20" width="20" align="absmiddle"><img class="emoji" title=":smile:" alt=":smile:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" align="absmiddle"><img class="emoji" title=":laughing:" alt=":laughing:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f606.png" height="20" width="20" align="absmiddle"><img class="emoji" title=":blush:" alt=":blush:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60a.png" height="20" width="20" align="absmiddle"><img class="emoji" title=":smiley:" alt=":smiley:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f603.png" height="20" width="20" align="absmiddle"><img class="emoji" title=":relaxed:" alt=":relaxed:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/263a.png" height="20" width="20" align="absmiddle"><img class="emoji" title=":smirk:" alt=":smirk:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60f.png" height="20" width="20" align="absmiddle"><br>
-<img class="emoji" title=":heart_eyes:" alt=":heart_eyes:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60d.png" height="20" width="20" align="absmiddle"><img class="emoji" title=":kissing_heart:" alt=":kissing_heart:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f618.png" height="20" width="20" align="absmiddle"><img class="emoji" title=":kissing_closed_eyes:" alt=":kissing_closed_eyes:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f61a.png" height="20" width="20" align="absmiddle"><img class="emoji" title=":flushed:" alt=":flushed:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f633.png" height="20" width="20" align="absmiddle"><img class="emoji" title=":relieved:" alt=":relieved:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60c.png" height="20" width="20" align="absmiddle"><img class="emoji" title=":satisfied:" alt=":satisfied:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f606.png" height="20" width="20" align="absmiddle"><img class="emoji" title=":grin:" alt=":grin:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f601.png" height="20" width="20" align="absmiddle"></p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</pre></td><td class="code"><pre><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+<span class="kd">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="nf">Find</span><span class="o">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">array</span><span class="o">,</span><span class="kt">int</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">height</span><span class="o">=</span><span class="n">array</span><span class="o">.</span><span class="na">size</span><span class="o">();</span>
+        <span class="kt">int</span> <span class="n">width</span><span class="o">=</span><span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">size</span><span class="o">();</span>
+         
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">height</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="o">&amp;&amp;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">width</span><span class="o">;){</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">target</span><span class="o">&gt;</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">])</span>
+                    <span class="n">j</span><span class="o">++;</span>
+                <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">target</span><span class="o">&lt;</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">])</span>
+                    <span class="n">i</span><span class="o">--;</span>
+                <span class="k">else</span> <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">};</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
   
 	</div>
 	<footer class="article-footer clearfix">
@@ -256,19 +208,7 @@
   }) %>
   -->
   
-  <a class="article-category-link" href="/categories/#Jekyll">Jekyll</a>
-  
-  <a class="article-category-link" href="/categories/#Git">Git</a>
-  
-  <a class="article-category-link" href="/categories/#CSharp">CSharp</a>
-  
-  <a class="article-category-link" href="/categories/#Java">Java</a>
-  
-  <a class="article-category-link" href="/categories/#JavaWeb">JavaWeb</a>
-  
-  <a class="article-category-link" href="/categories/#AspNet%20MVC">AspNet MVC</a>
-  
-  <a class="article-category-link" href="/categories/#Linux">Linux</a>
+  <a class="article-category-link" href="/categories/#OnlineJudge">OnlineJudge</a>
   
 </div>
 
@@ -282,7 +222,7 @@
   <span></span> <!--<%- tags.join('') %>-->
   
   
-  <a href="/tags/#Test">Test</a>
+  <a href="/tags/#剑指Offer">剑指Offer</a>
   
   </div>
 
@@ -292,7 +232,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://localhost:4000/jekyll/git/csharp/java/javaweb/aspnet%20mvc/linux/2017/01/29/test" data-title="Test | Jariver" data-tsina="" class="share clearfix">
+	  <div data-url="http://localhost:4000/onlinejudge/2017/02/01/Find" data-title="牛客网剑指Offer系列——二维数组中的查找 | Jariver" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -303,11 +243,19 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/onlinejudge/2017/02/01/printListFromTailToHead" title="牛客网剑指Offer系列——逆序打印链表">
+  <strong>上一篇：</strong><br/>
+  <span>
+  牛客网剑指Offer系列——逆序打印链表</span>
+</a>
+</div>
+
 
 <div class="next">
-<a href="/linux/2017/01/30/InstallDualSystem" title="Install Dual System (Windows10 and Ubuntu) without USB drive.">
- <strong>下一篇：</strong><br> 
- <span>Install Dual System (Windows10 and Ubuntu) without USB drive.
+<a href="/onlinejudge/2017/02/01/replaceSpace"  title="牛客网剑指Offer系列——替换空格">
+ <strong>下一篇：</strong><br/> 
+ <span>牛客网剑指Offer系列——替换空格
 </span>
 </a>
 </div>
@@ -343,27 +291,15 @@
 		  
 		
 		  
-			<li><a href="/categories/#Git" title="Git">Git<sup>1</sup></a></li>
+			<li><a href="/categories/#Test" title="Test">Test<sup>1</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/#CSharp" title="CSharp">CSharp<sup>1</sup></a></li>
+			<li><a href="/categories/#Linux" title="Linux">Linux<sup>1</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/#Java" title="Java">Java<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/#JavaWeb" title="JavaWeb">JavaWeb<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/#AspNet%20MVC" title="AspNet MVC">AspNet MVC<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/#Linux" title="Linux">Linux<sup>2</sup></a></li>
+			<li><a href="/categories/#OnlineJudge" title="OnlineJudge">OnlineJudge<sup>8</sup></a></li>
 		  
 		
 		</ul>
@@ -385,6 +321,10 @@
 		
 			
 				<li><a href="/tags/#DualSystem" title="DualSystem">DualSystem<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/#剑指Offer" title="剑指Offer">剑指Offer<sup>8</sup></a></li>
 			
 		
 		</ul>
@@ -413,7 +353,7 @@
 </aside>
 </div>
     </div>
-    <footer><div id="footer">
+    <footer><div id="footer" >
 	
 	<div class="line">
 		<span></span>
@@ -422,11 +362,11 @@
 	
 	
 	<section class="info">
-		<p> Hello, I'm Jariver studying in Fzu. <br>
+		<p> Hello, I'm Jariver studying in Fzu. <br/>
 			This is my blog, we can study together.</p>
 	</section>
 	 
-	<div class="social-font">
+	<div class="social-font" class="clearfix">
 		
 		
 		
@@ -667,7 +607,7 @@ $(document).ready(function(){
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/assets/img/scrollup.png"></a>
+	<a title="返回顶部"><img src="/assets/img/scrollup.png"/></a>
 	</div>
 	<script src="/assets/js/totop.js"></script>
 
@@ -713,3 +653,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
   </body>
 </html>
+

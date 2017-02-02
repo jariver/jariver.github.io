@@ -1,6 +1,6 @@
 
 
-    <!DOCTYPE HTML>
+ <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     
     
     
-    <title>Jacman | Jariver</title>
+    <title>牛客网剑指Offer系列——两个栈实现队列 | Jariver</title>
     
 
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
@@ -21,14 +21,14 @@
     
     <meta name="description" content="page.description">
     
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="article">
     
-    <meta property="og:title" content="Jacman">
-    <meta property="og:url" content="/README_en">
+    <meta property="og:title" content="牛客网剑指Offer系列——两个栈实现队列">
+    <meta property="og:url" content="/onlinejudge/2017/02/01/StackToQueue">
     <meta property="og:site_name" content="Jariver">
     <meta property="og:description" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Jacman">
+    <meta name="twitter:title" content="牛客网剑指Offer系列——两个栈实现队列">
     <meta name="twitter:description" content="page.description">
     <meta name="twitter:creator" content="@">
     <link rel="publisher" href="">
@@ -48,9 +48,9 @@
     <link rel="stylesheet" href="/assets/css/highlight.css" type="text/css">
 </head>
 
-      <body>
-        <header>
-          <div>
+  <body>
+    <header>
+        <div>
 		    
 			<div id="imglogo">
 				<a href="/"><img src="/assets/img/logo.png" alt="Jariver" title="Jariver"/></a>
@@ -84,113 +84,132 @@
 				</ul>
 			</nav>	
 </div>
-        </header>
-        <div id="container">
-          
+    </header>
+    <div id="container">
+      
 
 
 
-
-<div id="main" class="page" itemscope itemprop="blogPost">
+<div id="main" class="post" itemscope itemprop="blogPost">
   
 	<article itemprop="articleBody"> 
 	<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/README_en" title="Jacman" itemprop="url">Jacman</a>
+      <a href="/onlinejudge/2017/02/01/StackToQueue" title="牛客网剑指Offer系列——两个栈实现队列" itemprop="url">牛客网剑指Offer系列——两个栈实现队列</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Jariver" target="_blank" itemprop="author">Jariver</a>
 		
   <p class="article-time">
-    <time datetime="" itemprop="datePublished"> 发表于 </time>
+    <time datetime="2017-02-01 21:00:21 +0800" itemprop="datePublished"> 发表于 2017-02-01</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
-		<h1 id="jacman">Jacman</h1>
+		<div id="toc" class="toc-article toc-content" style="display: none;">
+		
+			<!--<%- toc(item.content) %>-->
+		
+		</div>
+		
+		<h2 id="题目描述">题目描述</h2>
 
-<p><strong><a href="/README.md">中文</a> | English</strong></p>
+<p>用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。</p>
 
-<p>Jacman is a fresh looking and responsive theme for <a href="http://jekyllrb.com">Jekyll</a> with more features and some build-in Chinese service based on <a href="https://github.com/wuchong/jacman">Hexo Jacman</a>.  </p>
+<h2 id="题目解析">题目解析</h2>
 
-<ul>
-<li><a href="http://simpleyyt.github.io/jekyll-jacman/">Demo</a></li>
-<li><a href="http://simpleyyt.github.io">Yitao&#39;s Blog</a></li>
-<li><a href="http://simpleyyt.github.io/jekyll-jacman/jekyll/2015/09/20/how-to-use-jacman">如何使用 Jacman 主题</a></li>
-</ul>
+<p>用一个栈stack2来保存数据，队列push操作的时候直接stack2的push操作即可。pop操作时，队列是先进先出，而栈是先进后出，所以应该把stack2中的元素一个个的pop出来，push到stack1中，之后，stack1的栈顶即是stack2原来的栈底，也就是队首元素，stack1直接pop出队首即可。pop完之后把stack1中的元素重新pop-push到stack2中保存。代码如下：</p>
 
-<h2 id="local-setup">Local Setup</h2>
-
-<p>Check whether you have <code>Ruby 2.1.0</code> or higher installed:</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">ruby --version
-</code></pre></div>
-<p>Install <code>Bundler</code>:</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">gem install bundler
-</code></pre></div>
-<p>Clone Jacman theme:</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">git clone https://github.com/Simpleyyt/jekyll-jacman.git
-<span class="nb">cd </span>jekyll-jacman
-</code></pre></div>
-<p>You can change the <code>language</code> setting to <code>en</code> in <code>_config.yml</code>.</p>
-
-<p>Install Jekyll and other dependencies from the GitHub Pages gem:</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">bundle install
-</code></pre></div>
-<p>Run your Jekyll site locally:</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">bundle <span class="nb">exec </span>jekyll server
-</code></pre></div>
-<p>More Details：<a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/">Setting up your GitHub Pages site locally with Jekyll</a></p>
-
-<h2 id="features">Features</h2>
-
-<ul>
-<li><strong>menu</strong><br>
-Main navigation menu.</li>
-<li><strong>widget</strong><br>
-Widgets displaying in sidebar.The category,tag,rss,archive,tagcloud,links,weibo are supported.</li>
-<li><strong>Image</strong><br>
-Images about favicon, site logo, author image, banner image. Support different image styles like <code>img-logo</code>,<code>img-topic</code>,<code>img-center</code> etc.</li>
-<li><strong>index</strong><br>
-Two different home page display modes.You can visit <a href="http://jacman.wuchong.me">Demo</a> to check the difference.</li>
-<li><strong>author</strong><br>
-Author imformation, used to show your social network links on the bottom right. Including github, stackoverflow, twitter, facebook, linkedin, google+, weibo, douban, zhihu, email.</li>
-<li><strong>toc</strong><br>
-Show Table Of Contents in article &amp; aside.</li>
-<li><strong>comments</strong><br>
-<a href="http://duoshuo.com/">duoshuo</a> &amp; <a href="https://disqus.com/">disqus</a> are supported.</li>
-<li><strong>jiathis</strong><br>
-Build-in share tool or <a href="http://www.jiathis.com/">JiaThis</a> share buttons at the bottom of articles.</li>
-<li><strong>Analytiscs</strong><br>
-<a href="http://www.google.com/analytics/">Google analytics</a> &amp; <a href="http://tongji.baidu.com/">Baidu tongji</a> &amp; <a href="http://www.cnzz.com/">CNZZ tongji</a> are all supported.</li>
-<li><strong>Search</strong><br>
-<a href="https://www.google.com/cse/">Googlle Custom Search</a> &amp; <a href="http://zn.baidu.com/">Baidu Site Search</a> &amp; <a href="http://tinysou.com/">Tiny Search</a> are supported.</li>
-<li><strong>totop</strong><br>
-Scroll to top</li>
-<li><strong>rss</strong><br>
-RSS subscription link (change if using Feedburner).</li>
-<li><strong>fancybox</strong><br>
-Enable <a href="http://fancyapps.com/fancybox/">Fancybox</a></li>
-<li><strong>others</strong>
-You can configure sidebar not show in post pages.</li>
-</ul>
-
-<h2 id="about-kramdown-engine-and-rouge-highlighter">About kramdown  engine and rouge highlighter</h2>
-
-<p>Redcarpet engine and pygments highlighter are currently unsupported on GitHub Pages. However, everythings seems normal except for the <em>Page build warning</em> mail. So I just ignore it.</p>
-
-<p>I also create a <code>kramdown</code> branch, which changes the markdown engine to kramdown and highlighter to rough.</p>
-
-<h2 id="license">License</h2>
-
-<p><a href="/LICENSE">MIT</a></p>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></td><td class="code"><pre><span class="kd">class</span> <span class="nc">Solution</span>
+<span class="o">{</span>
+<span class="kd">public</span><span class="o">:</span>
+    <span class="kt">void</span> <span class="nf">push</span><span class="o">(</span><span class="kt">int</span> <span class="n">node</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">stack2</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">node</span><span class="o">);</span>
+    <span class="o">}</span>
+ 
+    <span class="kt">int</span> <span class="nf">pop</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">while</span><span class="o">(!</span><span class="n">stack2</span><span class="o">.</span><span class="na">empty</span><span class="o">()){</span>
+            <span class="n">stack1</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">stack2</span><span class="o">.</span><span class="na">top</span><span class="o">());</span>
+            <span class="n">stack2</span><span class="o">.</span><span class="na">pop</span><span class="o">();</span>
+        <span class="o">}</span>
+         
+        <span class="kt">int</span> <span class="n">flag</span><span class="o">=</span><span class="n">stack1</span><span class="o">.</span><span class="na">top</span><span class="o">();</span>
+        <span class="n">stack1</span><span class="o">.</span><span class="na">pop</span><span class="o">();</span>
+         
+        <span class="k">while</span><span class="o">(!</span><span class="n">stack1</span><span class="o">.</span><span class="na">empty</span><span class="o">()){</span>
+            <span class="n">stack2</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">stack1</span><span class="o">.</span><span class="na">top</span><span class="o">());</span>
+            <span class="n">stack1</span><span class="o">.</span><span class="na">pop</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">flag</span><span class="o">;</span>
+    <span class="o">}</span>
+ 
+<span class="kd">private</span><span class="o">:</span>
+    <span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">stack1</span><span class="o">;</span>
+    <span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">stack2</span><span class="o">;</span>
+<span class="o">};</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
   
 	</div>
 	<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+<div class="article-categories">
+  <span></span>
+  <!--
+  <%- list_categories(item.categories, {
+      show_count: false,
+      class: 'article-category',
+      style: 'none',
+      separator: '►'
+  }) %>
+  -->
+  
+  <a class="article-category-link" href="/categories/#OnlineJudge">OnlineJudge</a>
+  
+</div>
+
+
+  <div class="article-tags">
+  <!--
+  <% var tags = [];
+    item.tags.forEach(function(tag){
+      tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+    }); %>-->
+  <span></span> <!--<%- tags.join('') %>-->
+  
+  
+  <a href="/tags/#剑指Offer">剑指Offer</a>
+  
+  </div>
 
 </div>
 
@@ -198,7 +217,7 @@ You can configure sidebar not show in post pages.</li>
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://localhost:4000/README_en" data-title="Jacman | Jariver" data-tsina="" class="share clearfix">
+	  <div data-url="http://localhost:4000/onlinejudge/2017/02/01/StackToQueue" data-title="牛客网剑指Offer系列——两个栈实现队列 | Jariver" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -207,11 +226,119 @@ You can configure sidebar not show in post pages.</li>
 </footer>   
 	</article>
 	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/linux/2017/01/30/InstallDualSystem" title="Install Dual System (Windows10 and Ubuntu) without USB drive.">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Install Dual System (Windows10 and Ubuntu) without USB drive.</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/onlinejudge/2017/02/01/printListFromTailToHead"  title="牛客网剑指Offer系列——逆序打印链表">
+ <strong>下一篇：</strong><br/> 
+ <span>牛客网剑指Offer系列——逆序打印链表
+</span>
+</a>
+</div>
+
+</nav>
+
 	
 
 </div>  
-        </div>
-        <footer><div id="footer" >
+
+      
+      
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside toc-content">
+ 
+ <!--<%- toc(item.content) %>-->
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/#Jekyll" title="Jekyll">Jekyll<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/#Test" title="Test">Test<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/#Linux" title="Linux">Linux<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/#OnlineJudge" title="OnlineJudge">OnlineJudge<sup>8</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/#Test" title="Test">Test<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/#Ubuntu" title="Ubuntu">Ubuntu<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/#DualSystem" title="DualSystem">DualSystem<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/#剑指Offer" title="剑指Offer">剑指Offer<sup>8</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            <a href="http://csming1995.github.io" target="_blank" title="csming's Blog">csming's Blog</a>
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
 	
 	<div class="line">
 		<span></span>
@@ -261,7 +388,7 @@ You can configure sidebar not show in post pages.</li>
 		</p>
 </div>
 </footer>
-        <script src="/assets/js/jquery-2.0.3.min.js"></script>
+    <script src="/assets/js/jquery-2.0.3.min.js"></script>
 <script src="/assets/js/jquery.imagesloaded.min.js"></script>
 <script src="/assets/js/gallery.js"></script>
 <script src="/assets/js/jquery.qrcode-0.12.0.min.js"></script>
@@ -309,13 +436,55 @@ $(document).ready(function(){
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
       
+      $('#toc.toc-aside').css('display', 'none');
+      
     }
   });
 });
 </script>
 
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('#toc.toc-aside').toc({
+    title: "文章目录",
+    showEffect: "none"
+  });
+  $('#toc.toc-article').toc({
+    title: "文章目录",
+    showEffect: "show",
+    showSpeed: 0
+  });
+});
+</script>
 
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
 
 
 
@@ -467,6 +636,6 @@ $(document).ready(function(){
 <!-- Tiny_search Begin -->
 
 <!-- Tiny_search End -->
-      </body>
-     </html>
+  </body>
+</html>
 
