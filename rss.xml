@@ -5,8 +5,8 @@
         <description>Jariver - Jariver</description>
         <link></link>
         <atom:link href="" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Tue, 07 Feb 2017 19:40:56 +0800</lastBuildDate>
-        <pubDate>Tue, 07 Feb 2017 19:40:56 +0800</pubDate>
+        <lastBuildDate>Tue, 07 Feb 2017 19:47:34 +0800</lastBuildDate>
+        <pubDate>Tue, 07 Feb 2017 19:47:34 +0800</pubDate>
         <ttl>60</ttl>
 
 
@@ -14,10 +14,10 @@
                 <title>IDEA下搭建并部署一个Servlet程序</title>
                 <description>&lt;h2 id=&quot;1-新建一个servlet项目&quot;&gt;1.新建一个Servlet项目&lt;/h2&gt;
 
-&lt;p&gt;点击File - New - Project...然后选择WebApplication，如下图：&lt;br&gt;
+&lt;p&gt;点击File -&amp;gt; New -&amp;gt; Project...然后选择WebApplication，如下图：&lt;br&gt;
 &lt;img src=&quot;https://jariver.github.io/source/2017-02-07/pic1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;新建完毕之后，在ServletDemo目录下右击src - New - Servlet，新建Servlet文件，如下图：&lt;br&gt;
+&lt;p&gt;新建完毕之后，在ServletDemo目录下右击src -&amp;gt; New -&amp;gt; Servlet，新建Servlet文件，如下图：&lt;br&gt;
 &lt;img src=&quot;https://jariver.github.io/source/2017-02-07/pic2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;2-添加servlet-api-jar&quot;&gt;2.添加Servlet-api.jar&lt;/h2&gt;
@@ -28,8 +28,7 @@
 
 &lt;h2 id=&quot;3-配置文件路径&quot;&gt;3.配置文件路径&lt;/h2&gt;
 
-&lt;p&gt;在web/WEB-INF下创建两个文件夹：classes和lib，&lt;br&gt;
-classes用来存放编译后输出的class文件，lib用于存放第三方jar包。&lt;/p&gt;
+&lt;p&gt;在web/WEB-INF下创建两个文件夹：classes和lib，classes用来存放编译后输出的class文件，lib用于存放第三方jar包。&lt;/p&gt;
 
 &lt;p&gt;配置文件夹路径&lt;/p&gt;
 
