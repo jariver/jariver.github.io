@@ -8,7 +8,7 @@
     
     
     
-    <title>牛客网剑指Offer系列——旋转数组的最小数字 | Jariver</title>
+    <title>牛客网剑指Offer系列——矩阵快速幂解斐波那契数列 | Jariver</title>
     
 
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
@@ -23,12 +23,12 @@
     
     <meta property="og:type" content="article">
     
-    <meta property="og:title" content="牛客网剑指Offer系列——旋转数组的最小数字">
-    <meta property="og:url" content="/onlinejudge/2017/02/01/RotateArray">
+    <meta property="og:title" content="牛客网剑指Offer系列——矩阵快速幂解斐波那契数列">
+    <meta property="og:url" content="/onlinejudge/2017/02/06/Fibonacci">
     <meta property="og:site_name" content="Jariver">
     <meta property="og:description" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="牛客网剑指Offer系列——旋转数组的最小数字">
+    <meta name="twitter:title" content="牛客网剑指Offer系列——矩阵快速幂解斐波那契数列">
     <meta name="twitter:description" content="page.description">
     <meta name="twitter:creator" content="@">
     <link rel="publisher" href="">
@@ -96,14 +96,14 @@
 	<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/onlinejudge/2017/02/01/RotateArray" title="牛客网剑指Offer系列——旋转数组的最小数字" itemprop="url">牛客网剑指Offer系列——旋转数组的最小数字</a>
+      <a href="/onlinejudge/2017/02/06/Fibonacci" title="牛客网剑指Offer系列——矩阵快速幂解斐波那契数列" itemprop="url">牛客网剑指Offer系列——矩阵快速幂解斐波那契数列</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Jariver" target="_blank" itemprop="author">Jariver</a>
 		
   <p class="article-time">
-    <time datetime="2017-02-01 23:01:22 +0800" itemprop="datePublished"> 发表于 2017-02-01</time>
+    <time datetime="2017-02-06 20:01:22 +0800" itemprop="datePublished"> 发表于 2017-02-06</time>
     
   </p>
 </header>
@@ -117,14 +117,11 @@
 		
 		<h2 id="题目描述">题目描述</h2>
 
-<p>把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。<br>
-输入一个非递减排序的数组的一个旋转，输出旋转数组的最小元素。<br>
-例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1。<br>
-NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。</p>
+<p>大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项</p>
 
 <h2 id="题目解析">题目解析</h2>
 
-<p>非递减排序的数组进行旋转之后，会变成两个非递减数组的组合，例如1 2 2 3 4 5，旋转变成了2 3 4 5 1 2，第一种解法就是遍历数组直到发现数组中的元素小于前一个元素，该元素就是最小元素，时间复杂度为O(n)。代码如下：</p>
+<p>解斐波那契数列最基本的方法就是递归和迭代，但是递归要做太多重复的事情，效率很低不考虑。用基本的迭代方法，复杂度是O(n)。一开始令f1=0，f2=1，当n=0时，直接返回f1；当n=1时，交换f1、f2；之后开始正常的迭代过程，每次前移一个单位，f1为f2的后一个数，代码如下：</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -136,35 +133,54 @@ NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。</p>
 8
 9
 10
-11
-12
-13
-14
-15
-16
-17
-18</pre></td><td class="code"><pre><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+11</pre></td><td class="code"><pre><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
 <span class="kd">public</span><span class="o">:</span>
-    <span class="kt">int</span> <span class="nf">minNumberInRotateArray</span><span class="o">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">rotateArray</span><span class="o">)</span> <span class="o">{</span>
-        <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">rotateArray</span><span class="o">.</span><span class="na">size</span><span class="o">();</span>
-        <span class="c1">//数组长度为0</span>
-        <span class="k">if</span><span class="o">(!</span><span class="n">size</span><span class="o">)</span> <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
-        
-        <span class="c1">//数组部分旋转</span>
-        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
-            <span class="k">if</span><span class="o">(</span><span class="n">rotateArray</span><span class="o">[</span><span class="n">i</span><span class="o">]&gt;</span><span class="n">rotateArray</span><span class="o">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">]){</span>
-                <span class="k">return</span> <span class="n">rotateArray</span><span class="o">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">];</span>
-            <span class="o">}</span>
+    <span class="kt">int</span> <span class="nf">Fibonacci</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">f1</span><span class="o">=</span><span class="mi">0</span><span class="o">,</span><span class="n">f2</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">n</span><span class="o">--&gt;</span><span class="mi">0</span><span class="o">){</span>
+            <span class="n">f1</span><span class="o">+=</span><span class="n">f2</span><span class="o">;</span>
+            <span class="n">f2</span><span class="o">=</span><span class="n">f1</span><span class="o">-</span><span class="n">f2</span><span class="o">;</span>
         <span class="o">}</span>
-        
-        <span class="c1">//数组完全旋转</span>
-        <span class="k">return</span> <span class="n">rotateArray</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+        <span class="k">return</span> <span class="n">f1</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">};</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>第二种解法就是简单的二分查找的变形，旋转数组具有一定程度的顺序，最小元素是两个非递减数组的边界元素，且第一个非递减数组的大小不小于第二个非递减数组。如1 2 2 3 4 5，旋转为2 3 4 5 1 2，第一个非递减数组为2 3 4 5，第二个非递减数组为1 2，最小元素即使第二个递减数组的第一个元素1。<br>
-若以mid为下标的元素的前一个元素大于它，则最小元素就是它；或者它的后一个元素小于它，则最小元素就是后一个元素。否则进行二分查找，以mid为下标的元素大于以low为下标的元素，说明最小元素在后半部分，令low=mid+1。反之，若mid下标的元素小于以low为下标的元素，说明最小元素在前半部分，令high=mid-1。代码如下：</p>
+<p>考虑到解斐波那契数列可以用矩阵快速幂的方法，时间复杂度O(logn)比直接进行迭代要更优，这里考虑用矩阵快速幂来解决本题，函数如下：<br>
+<img src="https://jariver.github.io/source/2017-02-07/Fibonacci.png" alt=""></p>
+
+<p>首先我们先讨论整数的快速幂问题，比如A^9 = A*A*A*A*A*A*A*A*A = A*((A^2)^2)^2，A平方后，再平方，再平方，然后乘上剩下的一个A，要乘4次，比直接迭代要乘以9次来的快。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">当n为自然数时，
+x*(2^n) = x&lt;&lt;n
+x/(2^n) = x&gt;&gt;n
+当x=2^n时，a%x = a&amp;(x-1)
+</code></pre></div>
+<p>于是可以写出整数快速幂的代码如下：</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre></td><td class="code"><pre><span class="kt">int</span> <span class="nf">fast_mod</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span><span class="kt">int</span> <span class="n">n</span><span class="o">){</span>
+    <span class="kt">int</span> <span class="n">ans</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span>
+    <span class="k">while</span><span class="o">(</span><span class="n">n</span><span class="o">){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">n</span><span class="o">&amp;</span><span class="mi">1</span><span class="o">){</span>
+            <span class="n">ans</span><span class="o">*=</span><span class="n">x</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">x</span><span class="o">*=</span><span class="n">x</span><span class="o">;</span>
+        <span class="n">n</span><span class="o">&gt;&gt;=</span><span class="mi">1</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">ans</span><span class="o">;</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>其实矩阵的快速幂和整数的快速幂是一样的，只是在乘法过程中我们要自己写一个矩阵的相乘函数。我们定一个一个结构体matrix来保存矩阵，初始化base和ans，base相当于整数快速幂中的x，ans相当于整数快速幂中的ans，求出矩阵[[1,1],[1,0]]的n次方，以此来求斐波那契数列。代码如下：</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -192,31 +208,43 @@ NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。</p>
 24
 25
 26
-27</pre></td><td class="code"><pre><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+27
+28
+29
+30
+31
+32
+33</pre></td><td class="code"><pre><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
 <span class="kd">public</span><span class="o">:</span>
-    <span class="kt">int</span> <span class="nf">minNumberInRotateArray</span><span class="o">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">rotateArray</span><span class="o">)</span> <span class="o">{</span>
-        <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">rotateArray</span><span class="o">.</span><span class="na">size</span><span class="o">();</span>
-        <span class="c1">//数组长度为0</span>
-        <span class="k">if</span><span class="o">(!</span><span class="n">size</span><span class="o">)</span> <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
-        
-        <span class="c1">//数组完全旋转</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">rotateArray</span><span class="o">[</span><span class="mi">0</span><span class="o">]&lt;</span><span class="n">rotateArray</span><span class="o">[</span><span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="o">])</span>
-            <span class="k">return</span> <span class="n">rotateArray</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
-
-        <span class="c1">//数组部分旋转</span>
-        <span class="kt">int</span> <span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="o">,</span><span class="n">high</span><span class="o">=</span><span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span><span class="n">mid</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
-        <span class="k">while</span><span class="o">(</span><span class="n">low</span><span class="o">&lt;=</span><span class="n">high</span><span class="o">){</span>
-            <span class="n">mid</span><span class="o">=(</span><span class="n">low</span><span class="o">+</span><span class="n">high</span><span class="o">)/</span><span class="mi">2</span><span class="o">;</span>
-            <span class="k">if</span><span class="o">(</span><span class="n">rotateArray</span><span class="o">[</span><span class="n">mid</span><span class="o">]&lt;</span><span class="n">rotateArray</span><span class="o">[</span><span class="n">mid</span><span class="o">-</span><span class="mi">1</span><span class="o">])</span>
-                <span class="k">return</span> <span class="n">rotateArray</span><span class="o">[</span><span class="n">mid</span><span class="o">];</span>
-            <span class="k">if</span><span class="o">(</span><span class="n">rotateArray</span><span class="o">[</span><span class="n">mid</span><span class="o">]&gt;</span><span class="n">rotateArray</span><span class="o">[</span><span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="o">])</span>
-                <span class="k">return</span> <span class="n">rotateArray</span><span class="o">[</span><span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="o">];</span>
-            <span class="k">if</span><span class="o">(</span><span class="n">rotateArray</span><span class="o">[</span><span class="n">mid</span><span class="o">]&gt;</span><span class="n">rotateArray</span><span class="o">[</span><span class="n">low</span><span class="o">])</span>
-                <span class="n">low</span><span class="o">=</span><span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span>
-            <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">rotateArray</span><span class="o">[</span><span class="n">mid</span><span class="o">]&lt;=</span><span class="n">rotateArray</span><span class="o">[</span><span class="n">low</span><span class="o">])</span>
-                <span class="n">high</span><span class="o">=</span><span class="n">mid</span><span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="nf">Fibonacci</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">base</span><span class="o">.</span><span class="na">b</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]=</span><span class="n">base</span><span class="o">.</span><span class="na">b</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">]=</span><span class="n">base</span><span class="o">.</span><span class="na">b</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">0</span><span class="o">]=</span><span class="mi">1</span><span class="o">;</span>
+        <span class="n">base</span><span class="o">.</span><span class="na">b</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">1</span><span class="o">]=</span><span class="mi">0</span><span class="o">;</span>
+        <span class="n">ans</span><span class="o">.</span><span class="na">b</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]=</span><span class="n">ans</span><span class="o">.</span><span class="na">b</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">1</span><span class="o">]=</span><span class="mi">1</span><span class="o">;</span>
+        <span class="n">ans</span><span class="o">.</span><span class="na">b</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">]=</span><span class="n">ans</span><span class="o">.</span><span class="na">b</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">0</span><span class="o">]=</span><span class="mi">0</span><span class="o">;</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">n</span><span class="o">){</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">n</span><span class="o">&amp;</span><span class="mi">1</span><span class="o">){</span>
+                <span class="n">ans</span><span class="o">=</span><span class="n">multi</span><span class="o">(</span><span class="n">ans</span><span class="o">,</span><span class="n">base</span><span class="o">);</span>
+            <span class="o">}</span>
+            <span class="n">base</span><span class="o">=</span><span class="n">multi</span><span class="o">(</span><span class="n">base</span><span class="o">,</span><span class="n">base</span><span class="o">);</span>
+            <span class="n">n</span><span class="o">&gt;&gt;=</span><span class="mi">1</span><span class="o">;</span>
         <span class="o">}</span>
-        <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">return</span> <span class="n">ans</span><span class="o">.</span><span class="na">b</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">];</span>
+    <span class="o">}</span>
+<span class="kd">private</span><span class="o">:</span>
+    <span class="n">struct</span> <span class="n">matrix</span><span class="o">{</span>
+        <span class="kt">int</span> <span class="n">b</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">2</span><span class="o">];</span>
+    <span class="o">}</span><span class="n">base</span><span class="o">,</span><span class="n">ans</span><span class="o">;</span>
+    <span class="n">matrix</span> <span class="nf">multi</span><span class="o">(</span><span class="n">matrix</span> <span class="n">m1</span><span class="o">,</span><span class="n">matrix</span> <span class="n">m2</span><span class="o">){</span>
+        <span class="n">matrix</span> <span class="n">matx</span><span class="o">;</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+            <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">;</span><span class="n">j</span><span class="o">++){</span>
+                <span class="n">matx</span><span class="o">.</span><span class="na">b</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]=</span><span class="mi">0</span><span class="o">;</span>
+                <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">k</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">;</span><span class="n">k</span><span class="o">++){</span>
+                    <span class="n">matx</span><span class="o">.</span><span class="na">b</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]+=</span><span class="n">m1</span><span class="o">.</span><span class="na">b</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">k</span><span class="o">]*</span><span class="n">m2</span><span class="o">.</span><span class="na">b</span><span class="o">[</span><span class="n">k</span><span class="o">][</span><span class="n">j</span><span class="o">];</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">matx</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">};</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
@@ -260,7 +288,7 @@ NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。</p>
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://localhost:4000/onlinejudge/2017/02/01/RotateArray" data-title="牛客网剑指Offer系列——旋转数组的最小数字 | Jariver" data-tsina="" class="share clearfix">
+	  <div data-url="http://localhost:4000/onlinejudge/2017/02/06/Fibonacci" data-title="牛客网剑指Offer系列——矩阵快速幂解斐波那契数列 | Jariver" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -272,18 +300,18 @@ NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。</p>
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/onlinejudge/2017/02/01/GetNext" title="牛客网剑指Offer系列——二叉树的下一个节点">
+ <a href="/onlinejudge/2017/02/01/reConstructBinaryTree" title="牛客网剑指Offer系列——重建二叉树">
   <strong>上一篇：</strong><br/>
   <span>
-  牛客网剑指Offer系列——二叉树的下一个节点</span>
+  牛客网剑指Offer系列——重建二叉树</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/onlinejudge/2017/02/01/PrintBinaryTree"  title="牛客网剑指Offer系列——将二叉树打印多行">
+<a href="/onlinejudge/2017/02/06/jumpFloor"  title="牛客网剑指Offer系列——两种青蛙跳台阶">
  <strong>下一篇：</strong><br/> 
- <span>牛客网剑指Offer系列——将二叉树打印多行
+ <span>牛客网剑指Offer系列——两种青蛙跳台阶
 </span>
 </a>
 </div>
