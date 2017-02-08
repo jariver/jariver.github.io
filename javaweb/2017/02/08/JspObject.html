@@ -120,12 +120,14 @@
 <h3 id="1-request对象">1.request对象</h3>
 
 <h4 id="1-获取querystring参数：">(1.获取QueryString参数：</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">request.getParameter(String name);
-</code></pre></div>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">);</span></code></pre></figure>
+
 <h4 id="2-请求转发数据传递">(2.请求转发数据传递</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">request.setAttribute(String name,Object object);
-request.getAttribute(String name);
-</code></pre></div>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">,</span><span class="n">Object</span> <span class="n">object</span><span class="o">);</span>
+<span class="n">request</span><span class="o">.</span><span class="na">getAttribute</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">);</span></code></pre></figure>
+
 <p>这两个方法的信息保存在request范围内，区别于Session对象的这两个方法。</p>
 
 <h4 id="3-获取客户端信息">(3.获取客户端信息</h4>
@@ -135,9 +137,10 @@ request.getAttribute(String name);
 <h3 id="2-cookie对象">2.Cookie对象</h3>
 
 <h4 id="1-创建并保存cookie">1).创建并保存Cookie</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">Cookie cookie_name =new Cookie("Parameter","Value");
-response.addCookie(cookie_name);
-</code></pre></div>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Cookie</span> <span class="n">cookie_name</span> <span class="o">=</span><span class="k">new</span> <span class="n">Cookie</span><span class="o">(</span><span class="s">"Parameter"</span><span class="o">,</span><span class="s">"Value"</span><span class="o">);</span>
+<span class="n">response</span><span class="o">.</span><span class="na">addCookie</span><span class="o">(</span><span class="n">cookie_name</span><span class="o">);</span></code></pre></figure>
+
 <p>实例如下：</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
@@ -218,19 +221,23 @@ response.addCookie(cookie_name);
 <h3 id="3-response对象">3.Response对象</h3>
 
 <h4 id="1-重定向网页">1).重定向网页</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">response.sendRedirect(String path);
-</code></pre></div>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">response</span><span class="o">.</span><span class="na">sendRedirect</span><span class="o">(</span><span class="n">String</span> <span class="n">path</span><span class="o">);</span></code></pre></figure>
+
 <h4 id="2-禁用缓存">2).禁用缓存</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">response.setHeader("Cache-Control","no-store");
-response.setDateHeader("Expires",0);
-</code></pre></div>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">response</span><span class="o">.</span><span class="na">setHeader</span><span class="o">(</span><span class="s">"Cache-Control"</span><span class="o">,</span><span class="s">"no-store"</span><span class="o">);</span>
+<span class="n">response</span><span class="o">.</span><span class="na">setDateHeader</span><span class="o">(</span><span class="s">"Expires"</span><span class="o">,</span><span class="mi">0</span><span class="o">);</span></code></pre></figure>
+
 <h4 id="3-自动刷新">3).自动刷新</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">response.setHeader("refresh",10);//每隔10秒自动刷新页面
-</code></pre></div>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">response</span><span class="o">.</span><span class="na">setHeader</span><span class="o">(</span><span class="s">"refresh"</span><span class="o">,</span><span class="mi">10</span><span class="o">);</span><span class="c1">//每隔10秒自动刷新页面</span></code></pre></figure>
+
 <h4 id="4-定时跳转">4).定时跳转</h4>
-<div class="highlight"><pre><code class="language-" data-lang="">response.setHeader("refresh","5;URL=login.jsp");
-//5秒后自动跳转到login.jsp页面
-</code></pre></div>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">response</span><span class="o">.</span><span class="na">setHeader</span><span class="o">(</span><span class="s">"refresh"</span><span class="o">,</span><span class="s">"5;URL=login.jsp"</span><span class="o">);</span>
+<span class="c1">//5秒后自动跳转到login.jsp页面</span></code></pre></figure>
+
 <h3 id="4-session对象">4.Session对象</h3>
 
 <h4 id="1-基本操作">1).基本操作</h4>
