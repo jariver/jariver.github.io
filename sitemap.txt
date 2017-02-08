@@ -12,6 +12,7 @@
 /README_en
 /page2/
 
+/javaweb/2017/02/08/JspObject
 /javaweb/2017/02/07/IDEABuildServlet
 /onlinejudge/2017/02/06/rectCover
 /onlinejudge/2017/02/06/jumpFloor
