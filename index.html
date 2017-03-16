@@ -97,6 +97,348 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/onlinejudge/2017/03/16/2016044game" title="CCF201604-4游戏(dp+BFS)" itemprop="url">CCF201604-4游戏(dp+BFS)</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Jariver" target="_blank" itemprop="author">Jariver</a>
+		
+  <p class="article-time">
+    <time datetime="2017-03-16 14:01:22 +0800" itemprop="datePublished">  2017-03-16</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="问题描述">问题描述</h2>
+
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/onlinejudge/2017/03/16/2016044game#more">Read More</a>
+          
+       </p>
+    </div>
+    
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <!--
+  <%- list_categories(item.categories, {
+      show_count: false,
+      class: 'article-category',
+      style: 'none',
+      separator: '►'
+  }) %>
+  -->
+  
+  <a class="article-category-link" href="/categories/#OnlineJudge">OnlineJudge</a>
+  
+</div>
+
+
+  <div class="article-tags">
+  <!--
+  <% var tags = [];
+    item.tags.forEach(function(tag){
+      tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+    }); %>-->
+  <span></span> <!--<%- tags.join('') %>-->
+  
+  
+  <a href="/tags/#CCF">CCF</a>
+  
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+    </article>
+
+
+
+
+
+
+  
+  
+  
+  
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/onlinejudge/2017/03/15/Kruskal" title="CCF201412-4最优灌溉(并查集、Kruskal算法)" itemprop="url">CCF201412-4最优灌溉(并查集、Kruskal算法)</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Jariver" target="_blank" itemprop="author">Jariver</a>
+		
+  <p class="article-time">
+    <time datetime="2017-03-15 20:01:22 +0800" itemprop="datePublished">  2017-03-15</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="问题描述">问题描述</h2>
+
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/onlinejudge/2017/03/15/Kruskal#more">Read More</a>
+          
+       </p>
+    </div>
+    
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <!--
+  <%- list_categories(item.categories, {
+      show_count: false,
+      class: 'article-category',
+      style: 'none',
+      separator: '►'
+  }) %>
+  -->
+  
+  <a class="article-category-link" href="/categories/#OnlineJudge">OnlineJudge</a>
+  
+</div>
+
+
+  <div class="article-tags">
+  <!--
+  <% var tags = [];
+    item.tags.forEach(function(tag){
+      tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+    }); %>-->
+  <span></span> <!--<%- tags.join('') %>-->
+  
+  
+  <a href="/tags/#CCF">CCF</a>
+  
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+    </article>
+
+
+
+
+
+
+  
+  
+  
+  
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/onlinejudge/2017/03/15/2014123SetGupiao" title="CCF201412-3-集合竞价" itemprop="url">CCF201412-3-集合竞价</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Jariver" target="_blank" itemprop="author">Jariver</a>
+		
+  <p class="article-time">
+    <time datetime="2017-03-15 16:01:22 +0800" itemprop="datePublished">  2017-03-15</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="问题描述">问题描述</h2>
+
+<p>　　某股票交易所请你编写一个程序，根据开盘前客户提交的订单来确定某特定股票的开盘价和开盘成交量。<br>
+　　该程序的输入由很多行构成，每一行为一条记录，记录可能有以下几种：<br>
+　　1. buy p s 表示一个购买股票的买单，每手出价为p，购买股数为s。<br>
+　　2. sell p s 表示一个出售股票的卖单，每手出价为p，出售股数为s。<br>
+　　3. cancel i表示撤销第i行的记录。<br>
+　　如果开盘价为p0，则系统可以将所有出价至少为p0的买单和所有出价至多为p0的卖单进行匹配。因此，此时的开盘成交量为出价至少为p0的买单的总股数和所有出价至多为p0的卖单的总股数之间的较小值。<br>
+　　你的程序需要确定一个开盘价，使得开盘成交量尽可能地大。如果有多个符合条件的开盘价，你的程序应当输出最高的那一个。<br>
+输入格式<br>
+　　输入数据有任意多行，每一行是一条记录。保证输入合法。股数为不超过108的正整数，出价为精确到恰好小数点后两位的正实数，且不超过10000.00。<br>
+输出格式<br>
+　　你需要输出一行，包含两个数，以一个空格分隔。第一个数是开盘价，第二个是此开盘价下的成交量。开盘价需要精确到小数点后恰好两位。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/onlinejudge/2017/03/15/2014123SetGupiao#more">Read More</a>
+          
+       </p>
+    </div>
+    
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <!--
+  <%- list_categories(item.categories, {
+      show_count: false,
+      class: 'article-category',
+      style: 'none',
+      separator: '►'
+  }) %>
+  -->
+  
+  <a class="article-category-link" href="/categories/#OnlineJudge">OnlineJudge</a>
+  
+</div>
+
+
+  <div class="article-tags">
+  <!--
+  <% var tags = [];
+    item.tags.forEach(function(tag){
+      tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+    }); %>-->
+  <span></span> <!--<%- tags.join('') %>-->
+  
+  
+  <a href="/tags/#CCF">CCF</a>
+  
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+    </article>
+
+
+
+
+
+
+  
+  
+  
+  
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/onlinejudge/2017/03/14/HDOJ2544Dijkstra" title="HDOJ2544-最短路(Dijkstra算法)" itemprop="url">HDOJ2544-最短路(Dijkstra算法)</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Jariver" target="_blank" itemprop="author">Jariver</a>
+		
+  <p class="article-time">
+    <time datetime="2017-03-14 20:01:22 +0800" itemprop="datePublished">  2017-03-14</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="problem-description">Problem Description</h2>
+
+<p>在每年的校赛里，所有进入决赛的同学都会获得一件很漂亮的t-shirt。但是每当我们的工作人员把上百件的衣服从商店运回到赛场的时候，却是非常累的！所以现在他们想要寻找最短的从商店到赛场的路线，你可以帮助他们吗？</p>
+
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/onlinejudge/2017/03/14/HDOJ2544Dijkstra#more">Read More</a>
+          
+       </p>
+    </div>
+    
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <!--
+  <%- list_categories(item.categories, {
+      show_count: false,
+      class: 'article-category',
+      style: 'none',
+      separator: '►'
+  }) %>
+  -->
+  
+  <a class="article-category-link" href="/categories/#OnlineJudge">OnlineJudge</a>
+  
+</div>
+
+
+  <div class="article-tags">
+  <!--
+  <% var tags = [];
+    item.tags.forEach(function(tag){
+      tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+    }); %>-->
+  <span></span> <!--<%- tags.join('') %>-->
+  
+  
+  <a href="/tags/#HDOJ">HDOJ</a>
+  
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+    </article>
+
+
+
+
+
+
+  
+  
+  
+  
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/javaweb/2017/02/08/JspObject" title="Jsp内置对象" itemprop="url">Jsp内置对象</a>
   </h1>
   <p class="article-author">By
@@ -593,345 +935,6 @@
 
 
 
-  
-  
-  
-  
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/onlinejudge/2017/02/01/PrintBinaryTree" title="牛客网剑指Offer系列——将二叉树打印多行" itemprop="url">牛客网剑指Offer系列——将二叉树打印多行</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Jariver" target="_blank" itemprop="author">Jariver</a>
-		
-  <p class="article-time">
-    <time datetime="2017-02-01 23:01:25 +0800" itemprop="datePublished">  2017-02-01</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="题目描述">题目描述</h2>
-
-<p>从上到下按层打印二叉树，同一层结点从左至右输出。每一层输出一行。</p>
-
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/onlinejudge/2017/02/01/PrintBinaryTree#more">Read More</a>
-          
-       </p>
-    </div>
-    
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <!--
-  <%- list_categories(item.categories, {
-      show_count: false,
-      class: 'article-category',
-      style: 'none',
-      separator: '►'
-  }) %>
-  -->
-  
-  <a class="article-category-link" href="/categories/#OnlineJudge">OnlineJudge</a>
-  
-</div>
-
-
-  <div class="article-tags">
-  <!--
-  <% var tags = [];
-    item.tags.forEach(function(tag){
-      tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
-    }); %>-->
-  <span></span> <!--<%- tags.join('') %>-->
-  
-  
-  <a href="/tags/#剑指Offer">剑指Offer</a>
-  
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-    </article>
-
-
-
-
-
-
-  
-  
-  
-  
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/onlinejudge/2017/02/01/RotateArray" title="牛客网剑指Offer系列——旋转数组的最小数字" itemprop="url">牛客网剑指Offer系列——旋转数组的最小数字</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Jariver" target="_blank" itemprop="author">Jariver</a>
-		
-  <p class="article-time">
-    <time datetime="2017-02-01 23:01:22 +0800" itemprop="datePublished">  2017-02-01</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="题目描述">题目描述</h2>
-
-<p>把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。<br>
-输入一个非递减排序的数组的一个旋转，输出旋转数组的最小元素。<br>
-例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1。<br>
-NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。</p>
-
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/onlinejudge/2017/02/01/RotateArray#more">Read More</a>
-          
-       </p>
-    </div>
-    
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <!--
-  <%- list_categories(item.categories, {
-      show_count: false,
-      class: 'article-category',
-      style: 'none',
-      separator: '►'
-  }) %>
-  -->
-  
-  <a class="article-category-link" href="/categories/#OnlineJudge">OnlineJudge</a>
-  
-</div>
-
-
-  <div class="article-tags">
-  <!--
-  <% var tags = [];
-    item.tags.forEach(function(tag){
-      tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
-    }); %>-->
-  <span></span> <!--<%- tags.join('') %>-->
-  
-  
-  <a href="/tags/#剑指Offer">剑指Offer</a>
-  
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-    </article>
-
-
-
-
-
-
-  
-  
-  
-  
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/onlinejudge/2017/02/01/GetNext" title="牛客网剑指Offer系列——二叉树的下一个节点" itemprop="url">牛客网剑指Offer系列——二叉树的下一个节点</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Jariver" target="_blank" itemprop="author">Jariver</a>
-		
-  <p class="article-time">
-    <time datetime="2017-02-01 23:01:21 +0800" itemprop="datePublished">  2017-02-01</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="题目描述">题目描述</h2>
-
-<p>给定一个二叉树和其中的一个结点，请找出中序遍历顺序的下一个结点并且返回。注意，树中的结点不仅包含左右子结点，同时包含指向父结点的指针。</p>
-
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/onlinejudge/2017/02/01/GetNext#more">Read More</a>
-          
-       </p>
-    </div>
-    
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <!--
-  <%- list_categories(item.categories, {
-      show_count: false,
-      class: 'article-category',
-      style: 'none',
-      separator: '►'
-  }) %>
-  -->
-  
-  <a class="article-category-link" href="/categories/#OnlineJudge">OnlineJudge</a>
-  
-</div>
-
-
-  <div class="article-tags">
-  <!--
-  <% var tags = [];
-    item.tags.forEach(function(tag){
-      tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
-    }); %>-->
-  <span></span> <!--<%- tags.join('') %>-->
-  
-  
-  <a href="/tags/#剑指Offer">剑指Offer</a>
-  
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-    </article>
-
-
-
-
-
-
-  
-  
-  
-  
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/onlinejudge/2017/02/01/replaceSpace" title="牛客网剑指Offer系列——替换空格" itemprop="url">牛客网剑指Offer系列——替换空格</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Jariver" target="_blank" itemprop="author">Jariver</a>
-		
-  <p class="article-time">
-    <time datetime="2017-02-01 23:01:00 +0800" itemprop="datePublished">  2017-02-01</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="题目描述">题目描述</h2>
-
-<p>请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。</p>
-
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/onlinejudge/2017/02/01/replaceSpace#more">Read More</a>
-          
-       </p>
-    </div>
-    
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <!--
-  <%- list_categories(item.categories, {
-      show_count: false,
-      class: 'article-category',
-      style: 'none',
-      separator: '►'
-  }) %>
-  -->
-  
-  <a class="article-category-link" href="/categories/#OnlineJudge">OnlineJudge</a>
-  
-</div>
-
-
-  <div class="article-tags">
-  <!--
-  <% var tags = [];
-    item.tags.forEach(function(tag){
-      tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
-    }); %>-->
-  <span></span> <!--<%- tags.join('') %>-->
-  
-  
-  <a href="/tags/#剑指Offer">剑指Offer</a>
-  
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
   <nav id="page-nav" class="clearfix">
@@ -978,7 +981,7 @@ NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。</p>
 		  
 		
 		  
-			<li><a href="/categories/#OnlineJudge" title="OnlineJudge">OnlineJudge<sup>11</sup></a></li>
+			<li><a href="/categories/#OnlineJudge" title="OnlineJudge">OnlineJudge<sup>15</sup></a></li>
 		  
 		
 		  
@@ -1020,6 +1023,14 @@ NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。</p>
 		
 			
 				<li><a href="/tags/#Jsp" title="Jsp">Jsp<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/#HDOJ" title="HDOJ">HDOJ<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/#CCF" title="CCF">CCF<sup>3</sup></a></li>
 			
 		
 		</ul>
